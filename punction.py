@@ -1,4 +1,4 @@
-def punctuation(content_clean):
+def punction(content_clean):
     """
     Function to check if punctuation is being used in a text entry. 
     Do not use this for names unless ' is removed from check_for string.
@@ -10,6 +10,6 @@ def punctuation(content_clean):
             content = content + x
     return content
 
-# testing
+# this is a test
 name = input("What's your name? >") or "no name given"
-print(punctuation(name))
+print(punction(name))
