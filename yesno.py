@@ -1,5 +1,6 @@
-# test:
-
+"""
+Check whether an answer is positive, negative or just indifferent.
+"""
 def yesno(answer):
     answer_no = ["fuck off", "no sirree", "no sirree", "no fucking way", "fuck that", "not much",
                  "no feckin way", "no chance", "never", "never going to work", "not likely", "unlikely",
