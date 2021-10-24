@@ -1,8 +1,16 @@
 1.
 Create Character:
+Dictionary!
+{"Hair": value, "Height": value, "build": value, "mass": value, "arm_strength": value,  }
 a/ Choice of race of characters?
-    these are going to be %ages.
-    
+ - makes no difference. People can be carrots or peas or rabbits or gherkins.
+ - they will be asked how many legs they have.
+    - if legs > 4, no arms, the manoeuvrability drops the more legs.
+    - if legs == 4, max two arms, speed increased if no arms, if they have arms, speed cut back to a specific value.
+    - if legs == 3, tripod, speed reduced but super sturdy.
+    - if legs == 2, vaguely humanoid.
+    - if legs < 2, 
+       ^-> how are you getting about? Wheels, speed
 
 b/ Explanation of Characteristics (stats)
 c/ Rolling the character
@@ -16,6 +24,7 @@ c/ Rolling the character
         8/ Hand speed
         9/ Body speed
         10/ Foot speed
+        11/ Manoeuvrability
         11/ Dogmatism
         12/ Pragmatism
         13/ Susceptibility
@@ -29,3 +38,13 @@ e/ Showing the final built character
 
 2.
 Choice of Directions - illustrated by features.
+
+SPELS!
+^^^^^^
+notes: if players cast spells, they should be taught the spell at the start. 
+datetime.datetime.now() will be logged as the character is asked what they want to do, and then once the input() has been made. If the time taken to input the command is greater than a certain time, chances are they'll suffer damage from the opposing character. It will also effect the next stage:
+    Spells should have some form of levelling - as they are used more often, the casting becomes quicker. So say a Fireball starts as
+    "H8SFA JFASD:N P&7fHH", the next stage, after first use, would be:
+    "HSFA JFASDN P7fHH", down to "H J P" at the highest level.
+
+    By being taught spells once at the start, people smart enough to write it down, or fucking copy it to a clipboard item, will be able to just paste the spell in. Silly people will be scrolling, 
