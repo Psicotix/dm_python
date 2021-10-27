@@ -1,7 +1,7 @@
 1.
 Create Character:
 Dictionary!
-{"Hair": value, "Height": value, "build": value, "mass": value, "arm_strength": value,  }
+{"Name": value, "Hair": value, "Height": value, "build": value, "mass": value, "arm_strength": value,  }
 a/ Choice of race of characters?
  - makes no difference. People can be carrots or peas or rabbits or gherkins.
  - they will be asked how many legs they have.
@@ -36,6 +36,17 @@ c/ Rolling the character
 d/ Giving them a description (a type)
 e/ Showing the final built character
 
+# 27 / 10 / 2021 - thought on Characteristics: MODIFIERS
+What if player is shown values (like up to 18 (which people will automatically want to exceed)or up to 100, which makes more sense - a godlike character would be 100% in a bunch of them...) but the program
+works it out from a modifier, so 50% = +0, 60 = +10.
+
+Then, when tests are made, the modifier is simply added to the test, instead of having to look at the stat and work it out. 
+
+It would also mean that the dictionary containing the characteristics could
+use {"arm_strength": -26}  and show f"Your ARM STRENGTH IS {(50+-26)}\%".
+
+Would we actually need a dictionary?! NO!
+
 2.
 Choice of Directions - illustrated by features.
 
@@ -47,4 +58,12 @@ datetime.datetime.now() will be logged as the character is asked what they want 
     "H8SFA JFASD:N P&7fHH", the next stage, after first use, would be:
     "HSFA JFASDN P7fHH", down to "H J P" at the highest level.
 
-    By being taught spells once at the start, people smart enough to write it down, or fucking copy it to a clipboard item, will be able to just paste the spell in. Silly people will be scrolling, 
+    By being taught spells once at the start, people smart enough to write it down, or fucking copy it to a clipboard item, will be able to just paste the spell in. Silly people will be scrolling or just getting it wrong.
+
+SCENARIOS!
+^^^^^^^^^^
+There should be some way to create a random adventure. A massive array of options?
+
+GRAPHICS
+^^^^^^^^
+Would be nice. Ideally as an ascii representation.
