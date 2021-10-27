@@ -11,5 +11,5 @@ def punction(content_clean):
     return content
 
 # this is a test
-name = input("What's your name? >") or "no name given"
-print(punction(name))
+# name = input("What's your name? >") or "no name given"
+# print(punction(name))
