@@ -1,6 +1,7 @@
 from punction import punction
 from time import sleep
 from yesno import yesno
+from random import randint
 
 # BUILD A CHARACTER
 # 1 / Hair style
@@ -86,26 +87,56 @@ print(f"""
         "OK {name}, so... how many arms do you have? Just give me a number"
     """)
 
-arms = 0
-n = 0
-while n == False:
+arms = ""
+while arms is not int:
     try:
         arms = int(input("Enter a number > "))
-        n = 1
+        break
     except ValueError:
         print("""
-        "An integer value only please, it makes it easier for me to work things out."
+        "An integer value only please, you know, like numbers, 21 or something like
+        that. Although if it were 21 I'm guessing you'd be very small. It just makes 
+        it easier for me to work things out."
         """)
-        n = 0
-
+dex = 50
 
 if arms == 0:
     print("""
-        "Oh!" She says, looking startled. "I wasn't expecting that."
+        "Oh!" She exclaims, looking startled. "I wasn't expecting that. This could be
+        difficult then."  """)
+    dex = 10
+elif arms <= 2:
+    print("""
+        "A fine number of arms" the old lady says, "and a very easy pattern for me to work with."
         """)
+    dex = dex + randint(25,48)
+elif arms <= 4:
+    print("""
+        "Well, that's a manageable number for us to work with," the old lady says, "Though I do
+        wonder how you keep them all in check."
+        """)
+    dex = dex + randint(10,60)
+    if dex > 100:
+        dex = randint(85, 99)
+elif arms <= 8:
+    print("""
+        "Oh my word, that's an awful number of arms... I'm surprised you fit in the bed!" 
+
+    The old lady seems genuinely surprised, but recovers very quickly.
+        """)
+    dex = 30 + randint(1, 30)
+else:
+    print("""
+        "Oh you poor thing!" exclaims the old lady. "They must be very short indeed for you to be able
+        to walk around, or even just walk through doors, or around a vase without knocking it over."
+
+        "I'll skip making you a sweater for now I think, that many sleeves would be an absolute horror."
+        """)
+    dex = 20 + randint(1, 20)
 
 characteristics["name"] = name
 characteristics["arms"] = arms
+characteristics["dex"] = dex
 print(characteristics)
 
 
