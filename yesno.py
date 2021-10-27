@@ -66,5 +66,5 @@ def yesno(answer):
 
 
 # testing lines
-f = input("input some text> ").lower()
-print(yesno(f))
+# f = input("input some text> ").lower()
+# print(yesno(f))
