@@ -17,51 +17,40 @@ def spellcreator(name, description):
     spells = spell_book.update({"name": name, "description": description, "spell": spell})
 
     return (spell_book)
-    with open('spellbook.txt', 'a') as smells:
-        smells.json.dumps(spell_book, indent = 4)
-
-# testing
-print("Make a new light spell!")
-name = "Light"
-description = "Casts a small amount of light around you, making it easier to see things"
-
-with open('spellbook.txt', 'a') as smells:
-    json.dump(spell_book, smells)
-
-spellcreator(name, description)
+    # print(spell_book)
 
 
-print("Make a fireball")
-name = "Fireball"
-description = "Throws a blob of molten something out of the palms of your hands like an old karate guy"
+def write_book(new_spell, filename='spellbook.json'):
+    with open(filename,'r+') as book:
+        # First we load existing data into a dict.
+        spell_data = json.load(book)
+        # Join new_spell with spell_data inside emp_details
+        spell_data["spells"].append(new_spell)
+        # Sets book's current position at offset.
+        book.seek(0)
+        # convert back to json.
+        json.dump(spell_data, book, indent = 4)
 
-spellcreator(name, description)
 
-with open('spellbook.txt', 'a') as smells:
-    json.dump(spell_book, smells)
-    raise
+# testing 
+name = ""
+description = ""
+with open('spellbook.txt', 'r') as spell_list, open('spellhint.txt', 'r') as hints:
+        for index, line in enumerate(spell_list):
+            name = line.strip()
+            description = hints[index]
+            print(name, description)
+# BROKEN
+        # for script in hints:
+        #     description = script.strip()
+        #     print(description)
+        # print(name, description)
 
-### THIS IS HOW TO READ AND ADD TO JSON FILE with structure as spellbook.json is looking.
-# code from https://www.freecodecamp.org/news/json-comment-example-how-to-comment-in-json-files/
-# import json
- 
- 
-# # function to add to JSON
-# def write_json(new_data, filename='data.json'):
-#     with open(filename,'r+') as file:
-#           # First we load existing data into a dict.
-#         file_data = json.load(file)
-#         # Join new_data with file_data inside emp_details
-#         file_data["emp_details"].append(new_data)
-#         # Sets file's current position at offset.
-#         file.seek(0)
-#         # convert back to json.
-#         json.dump(file_data, file, indent = 4)
- 
-#     # python object to be appended
-# y = {"emp_name":"Nikhil",
-#      "email": "nikhil@geeksforgeeks.org",
-#      "job_profile": "Full Time"
-#     }
-     
-# write_json(y)
+
+# print("Make a new spell: ")
+# name = input("What's the spell called? ")
+# description = input("Describe the spell: ")
+# spellcreator(name, description)
+
+# write_book(spell_book)
+# code from https://www.geeksforgeeks.org/append-to-json-file-using-python/
