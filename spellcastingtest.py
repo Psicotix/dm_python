@@ -20,7 +20,7 @@ time_end = datetime.datetime.now()
 total_spell_time = time_end - time_start
 if spell_input == spell_fireball:
     print(f"Well done!\nTotal time to cast spell was: {total_spell_time.seconds} seconds")
-    if total_spell_time.seconds <= 10:
+    if total_spell_time.seconds < 10:
          spell_hit = 1
          print("BOOOM! Your spell hits")
     else:

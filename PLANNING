@@ -60,6 +60,19 @@ datetime.datetime.now() will be logged as the character is asked what they want 
 
     By being taught spells once at the start, people smart enough to write it down, or fucking copy it to a clipboard item, will be able to just paste the spell in. Silly people will be scrolling or just getting it wrong.
 
+Current Plan:
+^^^^^^^^^^^^
+Spells created on first run of game.
+
+if <spellbook.json> exists:
+	open(spellbook.json) and read()
+else:
+	run create spells function
+		to write to spellbook.json
+			taking data (name and description) from 
+			spellhints and spellbook.txt to make the spells
+			for that playthrough.
+
 SCENARIOS!
 ^^^^^^^^^^
 There should be some way to create a random adventure. A massive array of options?

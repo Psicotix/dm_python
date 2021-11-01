@@ -1,0 +1,9 @@
+Flutter
+Fireball
+Light
+Thunder
+Torrent
+Icing
+Push
+Pull
+Put
