@@ -1,29 +1,4 @@
 {
     "spells": [
-        {
-            "name": "Fireball",
-            "description": "Throws a blob of molten something out of the palms of your hands like an old karate guy",
-            "spell": "8U7Fc L1tzb"
-        },
-        {
-            "name": "Light",
-            "description": "Casts a soft glow around you.",
-            "spell": "srGf0 xrlpv"
-        },
-        {
-            "name": "Oranges",
-            "description": "This will cause a shower of fresh oranges to fall from the sky.",
-            "spell": "m0JId T50HJ"
-        },
-        {
-            "name": "testing",
-            "description": "It tests if things work.",
-            "spell": "65NSe Mtwac"
-        },
-        {
-            "name": "another test",
-            "description": "Still testing",
-            "spell": "Ht0VO mNOIv"
-        }
     ]
 }
