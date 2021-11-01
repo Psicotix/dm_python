@@ -1,4 +1,11 @@
-#testing spell creation:
+"""
+Used to create spells and check if spellbook.json has
+already been written.
+REQUIRES:
+    modules: random, json, os
+    files:  spellbook.json, spellbook.txt (for names),
+            and spellhint.txt (for descriptions)
+"""
 import random
 import json
 import os
@@ -7,6 +14,11 @@ spell_book = {}
 
 
 def spellcreator(name, description):
+    """
+    Creates a spell, taking name and description from elsewhere 
+    and adding spell using random characters. 
+    Returns: spell_book
+    """
     characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
     spell_01 = random.sample(characters, 5)
     spell_02 = random.sample(characters, 5)
@@ -23,6 +35,10 @@ def spellcreator(name, description):
 
 
 def write_book(new_spell, filename='spellbook.json'):
+    """
+    Used to write the spell created by spellcreator() into
+    spellbook.json by default. No return, as written to file.
+    """
     with open(filename,'r+') as book:
         # First we load existing data into a dict.
         spell_data = json.load(book)
@@ -58,3 +74,6 @@ if os.path.getsize('spellbook.json') <= 25:
             n += 1
 else:
     print("Spell book already written! Don't bother doing it again!")
+    global full_book
+    full_book = os.path.getsize('spellbook.json')
+    print(full_book)
